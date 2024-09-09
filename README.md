@@ -1,4 +1,4 @@
-# OmniRoot dots
+<h1 align="center">OmniRoot dots</h1>
 
 ## Content:
 
