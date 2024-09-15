@@ -1,0 +1,192 @@
+
+@import "colors.css";
+
+
+/* == GENERAL == */
+* {
+	/* `otf-font-awesome` is required to be installed for icons */
+	font-family: FontAwesome, Fira Code, Roboto, Inter, JetBrainsMono Nerd Font, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: @foreground;
+	padding: 2px 4px;
+}
+
+window#waybar {
+	margin: 0;
+	background-color: @primary;
+	padding: 4px 4px;
+	border: 2px solid @secondary;
+	border-radius: 10px;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+	opacity: 0.9;
+}
+
+window#waybar.empty {
+	background-color: transparent;
+}
+
+.modules-center {
+	margin: 4px 0;
+}
+.modules-left,
+.modules-right {
+	margin: 4px 4px;
+	border: 2px solid @secondary;
+	border-radius: 10px;
+	padding: 4px 4px;
+}
+/* 
+.modules-right {
+		border: 2px solid @secondary;
+	border-radius: 10px;
+} */
+
+
+
+/* == LEFT SIDE == */
+#clock {
+	margin: 0 4px;
+	font-size: 16px;
+}
+
+#language {
+	margin: 0 4px;
+	border: 2px solid @secondary;
+	border-radius: 10px;
+	padding: 4px 8px;
+}
+
+#weather {
+	margin: 4px 4px;
+}
+
+/* == RIGHT SIDE == */
+
+#tray menu {
+	color: @foreground;
+	background-color: @primary;
+	border: 2px solid @secondary;
+	border-radius: 10px;
+}
+/*
+#tray menu *:hover {
+	background-color: @secondary;
+	border: 2px solid @accent;
+} */
+
+
+#custom-brightness {
+	margin: 0 6px;
+}
+
+#pulseaudio {
+	margin: 0 6px;
+}
+
+#battery {
+	margin: 0 4px;
+	font-size: 18px;
+}
+
+/* #battery.charging {
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, @accent 0%, @primary 0%);
+  border-right: 2px;
+  border-top: 0;
+  border-bottom: 0;
+  border-image-slice: 1;
+  animation: animateRight 6s linear infinite;
+} */
+
+
+#workspaces button {
+	color: @foreground;
+	/* 	
+	transition-property: all;
+	
+	transition-duration: 0.2s; */
+	border: 2px solid transparent;
+	border-radius: 10px;
+	transition: all 0.45s;
+	margin: 0 2px;
+}
+
+#workspaces button.active {
+	color: white;
+	border: 2px solid @accent-2;
+	background-color: @secondary;
+}
+
+/* not empty and not active */
+#workspaces button:not(.empty):not(.active) {
+	border: 2px solid @secondary;
+	/* background-color: @secondary; */
+}
+
+
+/* not working  */
+/* #workspaces button:hover,
+#workspaces button:hover * {
+	background-color: @secondary;
+	color: @primary;
+}  */
+
+
+
+@keyframes animateRight {
+	0% {
+		border-image: linear-gradient(to bottom, @accent 0%, @primary 0%);
+	}
+
+	10% {
+		border-image: linear-gradient(to bottom, @accent 10%, @primary 0%);
+	}
+
+	20% {
+		border-image: linear-gradient(to bottom, @accent 20%, @primary 0%);
+	}
+
+	30% {
+		border-image: linear-gradient(to bottom, @accent 30%, @primary 0%);
+	}
+
+	40% {
+		border-image: linear-gradient(to bottom, @accent 45%, @primary 0%);
+	}
+
+	50% {
+		border-image: linear-gradient(to bottom, @accent 55%, @primary 0%);
+	}
+
+	60% {
+		border-image: linear-gradient(to top, @accent 45%, @primary 0%);
+	}
+	70% {
+		border-image: linear-gradient(to top, @accent 30%, @primary 0%);
+	}
+	80% {
+		border-image: linear-gradient(to top, @accent 20%, @primary 0%);
+	}
+	90% {
+		border-image: linear-gradient(to top, @accent 10%, @primary 0%);
+	}
+
+	100% {
+		border-image: linear-gradient(to top, @accent 0%, @primary 0%);
+
+	}
+}
+
+
+
+
+
+
+.modules-center {
+	/* border-left: 3px solid @accent-2; */
+	/* border-right: 3px solid @accent-2; */
+	/* border-radius: 10px; */
+}
