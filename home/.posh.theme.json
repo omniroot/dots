@@ -1,81 +1,80 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{ .Folder }}",
   "blocks": [
     {
       "type": "prompt",
       "alignment": "right",
+      "newline": false,
       "overflow": "hide",
-      "segments": [
-        {
-          "type": "executiontime",
-          "style": "powerline",
-          "foreground": "#a9ffb4",
-          "template": " {{ .FormattedMs }}s <#ffffff>\ue601</>",
-          "properties": {
-            "threshold": 0,
-            "style": "dallas"
-          }
-        },
-        {
-          "type": "node",
-          "style": "powerline",
-          "foreground": "#45bf17",
-          "template": " \ue718 {{ .Full }} "
-        },
-        {
-          "type": "npm",
-          "style": "powerline",
-          "foreground": "#FE4A49",
-          "template": "<#F3EFF5>and</> \ue71e {{ .Full }} "
-        }
-      ]
+      "segments": []
     },
     {
       "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "overflow": "break",
       "segments": [
         {
-          "type": "path",
-          "style": "powerline",
-          "foreground": "#ffafd2",
           "properties": {
-            "style": "agnoster_full",
-            "home_icon": "home",
+            "cache_duration": "none",
             "folder_icon": "\uf07b",
-            "folder_separator_icon": " \u276f "
+            "folder_separator_icon": " ❯ ",
+            "home_icon": "home",
+            "style": "agnoster_full"
           },
-          "template": "\ue5ff {{ .Path }} "
+          "template": "\ue5ff {{ .Path }} ",
+          "foreground": "#ffafd2",
+          "type": "path",
+          "style": "powerline"
         },
         {
-          "type": "git",
-          "style": "powerline",
-          "foreground": "#f14e32",
           "properties": {
-            "branch_icon": "\ue725 "
+            "branch_icon": "\ue725 ",
+            "cache_duration": "none"
           },
-          "template": "({{ .HEAD }})"
+          "template": "({{ .HEAD }})",
+          "foreground": "#f14e32",
+          "type": "git",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "<#F3EFF5> -> </> \ue6a7 {{ .Full }} ",
+          "foreground": "#FE4A49",
+          "type": "yarn",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "<#F3EFF5> -> </> \ue718 {{ .Full }} ",
+          "foreground": "#45bf17",
+          "type": "node",
+          "style": "powerline"
         }
-      ]
+      ],
+      "newline": false
     },
     {
-      "alignment": "left",
-      "newline": true,
       "type": "prompt",
+      "alignment": "left",
       "segments": [
         {
-          "type": "status",
-          "style": "diamond",
-          "foreground": "#00c7fc",
           "properties": {
-            "always_enabled": true
+            "always_enabled": true,
+            "cache_duration": "none"
           },
-          "template": "<#00c7fc>\u276f</>_: "
+          "template": "<#00c7fc>❯</>_: ",
+          "foreground": "#00c7fc",
+          "type": "status",
+          "style": "diamond"
         }
-      ]
+      ],
+      "newline": true
     }
   ],
-  "console_title_template": "{{ .Folder }}",
-  "version": 2
+  "version": 3
 }
