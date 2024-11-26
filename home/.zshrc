@@ -54,9 +54,9 @@ zstyle ':completion:*' menu yes
 
 alias c="clear"
 alias ff="fastfetch"
-alias l="exa"
-alias ll="exa -al"
-alias llt="exa -l -L 2 --tree"
+alias l="eza"
+alias ll="eza -al"
+alias llt="eza -l -L 2 --tree"
 
 
 export PATH=$PATH:/home/omniroot/.spicetify
