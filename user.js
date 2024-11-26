@@ -159,3 +159,10 @@ user_pref("full-screen-api.warning.timeout", 0); // default=3000
 // PREF: smoother font
 // [1] https://reddit.com/r/firefox/comments/wvs04y/windows_11_firefox_v104_font_rendering_different/?context=3
 user_pref("gfx.webrender.quality.force-subpixel-aa-where-possible", true);
+
+// PREF: Disable built-in Pocket extension
+user_pref("extensions.pocket.enabled", false);
+      user_pref("extensions.pocket.api"," ");
+      user_pref("extensions.pocket.oAuthConsumerKey", " ");
+      user_pref("extensions.pocket.site", " ");
+      user_pref("extensions.pocket.showHome", false);
