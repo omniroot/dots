@@ -51,12 +51,20 @@ zstyle ':completion:*' menu yes
 
 
 # Aliases
-
 alias c="clear"
+alias gg="z"
 alias ff="fastfetch"
 alias l="eza"
 alias ll="eza -al"
 alias llt="eza -l -L 2 --tree"
+
+alias ta="tmux attach -t main"
+alias td="tmux detach"
+
+alias lofi="mpv --no-video \"https://www.youtube.com/watch?v=jfKfPfyJRdk\""
+alias lofi_synthwave="mpv --no-video \"https://www.youtube.com/watch?v=4xDzrJKXOOY\""
+
+
 
 
 export PATH=$PATH:/home/omniroot/.spicetify

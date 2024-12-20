@@ -1,0 +1,9 @@
+@define-color background rgb(58, 74, 60);
+
+@define-color accent #b4befe;
+@define-color primary rgb(58, 74, 60);
+@define-color secondary rgb(58, 74, 60);
+@define-color ternary rgb(67, 92, 71);
+/* 58, 74, 60
+67, 92, 71 */
+@define-color text #cdd6f4;

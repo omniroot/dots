@@ -1,0 +1,6 @@
+@define-color accent #b4befe;
+@define-color primary #373D35;
+@define-color secondary #212720;
+@define-color ternary #3a2d47;
+
+@define-color text #cdd6f4;

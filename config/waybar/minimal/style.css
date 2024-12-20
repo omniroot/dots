@@ -1,0 +1,235 @@
+@import "variables.css";
+
+/* == GENERAL == */
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: FontAwesome, Fira Code, Roboto, Inter, JetBrainsMono Nerd Font,
+    Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: @text;
+  padding: 2px 4px;
+  transition: all 200ms;
+}
+
+window#waybar {
+  margin: 0;
+  background-color: @background;
+  /* padding: 40px 4px; */
+  border: 2px solid @ternary;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  background-color: transparent;
+}
+
+.modules-center {
+  /* border: 2px solid @secondary; */
+  border-radius: 10px;
+  /* margin: 4px 0; */
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  /* margin: 4px 4px; */
+  /* border: 2px solid @secondary; */
+  border-radius: 0px;
+  padding: 4px 4px;
+}
+/* 
+.modules-right {
+		border: 2px solid @secondary;
+	border-radius: 10px;
+} */
+
+/* == LEFT SIDE == */
+
+#language {
+  margin: 2px 4px;
+  /* border: 4px solid @secondary; */
+  /* border-radius: 20px; */
+  padding: 7px 10px;
+}
+
+#custom-weather {
+  margin: 2px 4px;
+  /* border: 4px solid @secondary; */
+  /* border-radius: 20px; */
+  padding: 7px 8px;
+}
+
+#taskbar button.active {
+}
+
+/* == RIGHT SIDE == */
+
+#tray menu {
+  color: @foreground;
+  /* background-color: @primary; */
+  /* border: 2px solid @secondary; */
+  /* border-radius: 10px; */
+}
+/*
+#tray menu *:hover {
+	border: 2px solid @accent;
+} */
+
+#custom-brightness {
+  margin: 2px 4px;
+  padding-left: 10px;
+  padding-right: 15px;
+  /* background-color: @primary; */
+  /* border: 2px solid @secondary; */
+  /* border-radius: 20px; */
+  color: @text;
+}
+
+#pulseaudio {
+  margin: 2px 4px;
+  font-size: 18px;
+  padding: 0 10px;
+  /* background-color: @primary; */
+  /* border: 2px solid @secondary; */
+  /* border-radius: 20px; */
+}
+
+#battery {
+  margin: 2px 4px;
+  font-size: 18px;
+  padding: 0 10px;
+  /* background-color: @primary; */
+  /* border: 2px solid @secondary; */
+  /* border-radius: 20px; */
+}
+
+#clock {
+  margin: 2px 4px;
+  font-size: 18px;
+  padding: 0 10px;
+  /* background-color: @primary; */
+  /* border: 2px solid @secondary; */
+  /* border-radius: 20px; */
+}
+
+#custom-powermenu {
+  margin: 2px 4px;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 15px;
+  /* background-color: @primary; */
+  /* border: 2px solid @secondary; */
+  /* border-radius: 20px; */
+}
+
+#taskbar {
+  /* border-radius: 20px; */
+  /* background-color: @primary; */
+}
+
+#taskbar button.active {
+  /* border-radius: 20px; */
+}
+/* #battery.charging {
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, @accent 0%, @primary 0%);
+  border-right: 2px;
+  border-top: 0;
+  border-bottom: 0;
+  border-image-slice: 1;
+  animation: animateRight 6s linear infinite;
+} */
+
+#workspaces {
+  padding: 5px 4px;
+  /* border-radius: 20px; */
+}
+
+#workspaces button {
+  /* 	
+	transition-property: all;
+	
+	transition-duration: 0.2s; */
+  /* border: 2px solid transparent; */
+  border-radius: 0px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.45s;
+  /* margin: 0 2px; */
+  /* padding: 0 4px; */
+}
+
+#workspaces button.active {
+  /* color: white; */
+  /* border-radius: 20px; */
+  border-radius: 0px;
+  border-bottom: 2px solid @primary;
+  /* margin: 0 2px; */
+  /* padding: 0 15px; */
+  /* border: 2px solid @accent-2; */
+}
+
+/* not empty and not active */
+#workspaces button:not(.empty):not(.active) {
+  /* border: 2px solid transparent; */
+  /* border-radius: 8px; */
+  /* margin: 0 2px; */
+  /* padding: 0 4px; */
+}
+
+/* not working  */
+/* #workspaces button:hover * {
+  border-radius: 8px;
+  margin: 0 2px;
+  padding: 0 20px;
+} */
+
+@keyframes animateRight {
+  0% {
+    border-image: linear-gradient(to bottom, @accent 0%, @primary 0%);
+  }
+
+  10% {
+    border-image: linear-gradient(to bottom, @accent 10%, @primary 0%);
+  }
+
+  20% {
+    border-image: linear-gradient(to bottom, @accent 20%, @primary 0%);
+  }
+
+  30% {
+    border-image: linear-gradient(to bottom, @accent 30%, @primary 0%);
+  }
+
+  40% {
+    border-image: linear-gradient(to bottom, @accent 45%, @primary 0%);
+  }
+
+  50% {
+    border-image: linear-gradient(to bottom, @accent 55%, @primary 0%);
+  }
+
+  60% {
+    border-image: linear-gradient(to top, @accent 45%, @primary 0%);
+  }
+  70% {
+    border-image: linear-gradient(to top, @accent 30%, @primary 0%);
+  }
+  80% {
+    border-image: linear-gradient(to top, @accent 20%, @primary 0%);
+  }
+  90% {
+    border-image: linear-gradient(to top, @accent 10%, @primary 0%);
+  }
+
+  100% {
+    border-image: linear-gradient(to top, @accent 0%, @primary 0%);
+  }
+}
+
+.modules-center {
+}
