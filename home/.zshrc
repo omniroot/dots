@@ -60,6 +60,7 @@ alias llt="eza -l -L 2 --tree"
 
 alias ta="tmux attach -t main"
 alias td="tmux detach"
+alias n="nvim"
 
 alias lofi="mpv --no-video \"https://www.youtube.com/watch?v=jfKfPfyJRdk\""
 alias lofi_synthwave="mpv --no-video \"https://www.youtube.com/watch?v=4xDzrJKXOOY\""

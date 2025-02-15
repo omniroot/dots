@@ -104,7 +104,7 @@ window#waybar.hidden {
   padding: 0 10px;
   /* background-color: @primary; */
   /* border: 2px solid @secondary; */
-  /* border-radius: 20px; */
+  border-radius: 20px;
 }
 
 #clock {

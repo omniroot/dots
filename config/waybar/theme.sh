@@ -1,3 +1,3 @@
 
 
-theme="material-green"
+theme="minimal"
