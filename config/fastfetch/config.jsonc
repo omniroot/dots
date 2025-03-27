@@ -10,7 +10,8 @@
   },
   "logo": {
     "source": "~/.config/fastfetch/ascii.txt",
-    "color": { "1": "magenta", "2": "blue", "3": "yellow" }
+    "color": { "1": "magenta", "2": "blue", "3": "yellow" },
+    "padding": { "right": 2 }
   },
   "modules": [
     "title",
@@ -19,7 +20,6 @@
     "break",
     "disk",
     "memory",
-    "break",
     "uptime",
     "packages",
     "break",
