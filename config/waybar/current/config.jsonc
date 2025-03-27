@@ -32,6 +32,7 @@
     "pulseaudio",
     "battery",
     "custom/sep",
+    "custom/notifications",
     "custom/powermenu"
   ],
   // Left
@@ -169,7 +170,7 @@
     "on-click": "wlogout"
   },
 
-  "custom/notification": {
+  "custom/notifications": {
     "format": "{}  ",
     "interval": 10,
     "exec": "dunstctl count | grep \"[[:digit:]]\" -o | tail -1",
@@ -179,7 +180,7 @@
   "custom/updates": {
     "format": "{} ",
     "interval": 10,
-    "exec": "yay -Qu | wc -l",
+    "exec": "waybar-module-pacman-updates | jq \".text\"",
     "on-click": "$TERM --hold -T updates yay -Syyuu"
   },
   "custom/sep": {

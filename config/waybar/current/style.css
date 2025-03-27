@@ -46,6 +46,7 @@ window#waybar.hidden {
 #backlight,
 #pulseaudio,
 #battery,
+#custom-notifications,
 #custom-powermenu {
   padding: 4px 16px;
   margin: 0px 4px;
