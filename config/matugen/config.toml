@@ -51,6 +51,10 @@ post_hook = "sed -i 's/_/-/g' ~/.config/rofi/colors.css"
 input_path = "templates/vscode.json"
 output_path = "~/.vscode/extensions/hyprluna.hyprluna-matugen-theme-1.0.0/themes/hyprluna.json"
 
+[templates.dunst]
+input_path = 'templates/dunstrc'
+output_path = '~/.config/dunst/dunstrc'
+post_hook = "dunstctl reload"
 
 [templates.Telegram]
 input_path = "templates/telegram.theme"
