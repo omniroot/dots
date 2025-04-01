@@ -14,7 +14,7 @@
 window#waybar {
   margin: 0;
   padding: 0px 0px;
-  background: @surface_container_lowest;
+  background: @surface;
 }
 
 window#waybar.hidden {
@@ -29,7 +29,7 @@ window#waybar.hidden {
 }
 
 .modules-center {
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 /* WIDGETS */
@@ -50,8 +50,8 @@ window#waybar.hidden {
 #custom-powermenu {
   padding: 4px 16px;
   margin: 0px 4px;
-  color: @on_background;
-  background-color: @background;
+  color: @on_surface;
+  background-color: @surface_container;
   border-radius: 32px;
 }
 
@@ -62,15 +62,20 @@ tooltip {
 
 /* OVERRIDE */
 
+#workspaces {
+  padding: 4px 6px;
+}
+
 #workspaces button {
-  padding: 4px 12px;
+  color: @on_surface;
+  padding: 4px 10px;
   border-radius: 32px;
   transition: all 200ms;
   margin: 0px 2px;
 }
 
 #workspaces button.active {
-  padding: 4px 16px;
+  padding: 4px 24px;
   color: @on_primary;
   background-color: @primary;
 }
@@ -84,8 +89,8 @@ tooltip {
 #workspaces button:hover,
 #workspaces button.active:hover,
 #workspaces button:not(.empty):not(.active):hover {
-  color: @on_secondary_container;
-  background-color: @secondary_container;
+  color: @on_surface_variant;
+  background-color: @surface_variant;
   box-shadow: none;
   outline: none;
 }
@@ -102,11 +107,13 @@ tooltip {
 }
 
 #taskbar button.active {
-  background-color: @primary;
+  padding: 4px 24px;
+  background-color: @secondary_container;
 }
 
 #taskbar button:hover {
-  background-color: @secondary_container;
+  color: @on_surface_variant;
+  background-color: @surface_variant;
 }
 
 #custom-updates.has-updates {
@@ -123,5 +130,6 @@ tooltip {
 /* MORE */
 #custom-sep {
   margin: 0px 2px;
-  color: @secondary_container;
+  border-radius: 16px;
+  color: @outline_variant;
 }

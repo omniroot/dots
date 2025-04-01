@@ -144,7 +144,7 @@
   },
   "tray": {
     "icon-size": 20,
-    "spacing": 5
+    "spacing": 10
   },
   "battery": {
     "bat": "BAT0",
@@ -155,9 +155,11 @@
       "critical": 15
     },
     "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% 󰂄",
-    "format-icons": ["󰂎", "󰁺", "󰁽", "󰂁", "󰂂", "󰁹"],
-    "max-length": 25
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}%   ",
+    "format-plugged": "{capacity}%   ",
+    "format-alt": "{time} {icon}",
+    "format-icons": [" ", " ", " ", " ", " "]
   },
   "clock": {
     "interval": 60,
