@@ -29,7 +29,7 @@ window#waybar.hidden {
 }
 
 .modules-center {
-  /* margin-left: 20px; */
+  margin-left: -30px;
 }
 
 /* WIDGETS */
@@ -68,10 +68,15 @@ tooltip {
 
 #workspaces button {
   color: @on_surface;
+  background-color: @surface_container_high;
   padding: 4px 10px;
   border-radius: 32px;
   transition: all 200ms;
   margin: 0px 2px;
+}
+
+#workspaces button * {
+  font-size: 14px;
 }
 
 #workspaces button.active {
@@ -82,8 +87,8 @@ tooltip {
 
 /* not empty and not active */
 #workspaces button:not(.empty):not(.active) {
-  color: @on_surface;
-  background-color: @surface_container;
+  color: @on_secondary_container;
+  background-color: @secondary_container;
 }
 
 #workspaces button:hover,
@@ -98,6 +103,10 @@ tooltip {
 #clock {
   color: @on_secondary_container;
   background-color: @secondary_container;
+}
+
+#taskbar {
+  padding: 4px 6px;
 }
 
 #taskbar button {
