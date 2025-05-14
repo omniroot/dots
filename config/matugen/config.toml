@@ -56,6 +56,10 @@ input_path = 'templates/dunstrc'
 output_path = '~/.config/dunst/dunstrc'
 post_hook = "dunstctl reload"
 
+[templates.yazi]
+input_path = 'templates/yazi.toml'
+output_path = '~/.config/yazi/theme.toml'
+
 [templates.Telegram]
 input_path = "templates/telegram.theme"
 output_path = "~/.config/telegram-desktop/themes/material-you.tdesktop-theme"
