@@ -3,7 +3,12 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
 
 # zstyle :compinstall filename '/home/omniroot/.zshrc'
 

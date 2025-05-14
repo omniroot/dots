@@ -1,1 +1,1 @@
-eval "$(oh-my-posh init zsh --config ~/.posh.theme.json)"
+# eval "$(oh-my-posh init zsh --config ~/.posh.theme.json)"
