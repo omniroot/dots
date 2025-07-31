@@ -17,20 +17,21 @@
     // "temperature",
     "hyprland/workspaces"
   ],
-  "modules-center": ["custom/weather"],
+  "modules-center": [
+    "custom/weather"
+  ],
   "modules-right": [
     "tray",
     "custom/sep",
     // "power-profiles-daemon",
     "hyprland/language",
     "custom/brightness",
-    "pulseaudio",
+    // "pulseaudio",
     "battery",
     "clock",
     "custom/powermenu"
   ],
   // Left
-
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 17,
@@ -39,9 +40,10 @@
     "active-first": false,
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["nekobox"]
+    "ignore-list": [
+      "nekobox"
+    ]
   },
-
   "hyprland/workspaces": {
     "disable-scroll": true,
     "active-only": false,
@@ -81,7 +83,6 @@
     "exec": "~/.config/waybar/scripts/weather.sh",
     "interval": 400
   },
-
   // Right
   "power-profiles-daemon": {
     "format": "{icon} ",
@@ -101,7 +102,10 @@
     "on-click": "",
     "on-scroll-up": "brightnessctl set +10%",
     "on-scroll-down": "brightnessctl set 10%-",
-    "format-icons": ["", ""]
+    "format-icons": [
+      "",
+      ""
+    ]
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
@@ -115,7 +119,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", " "]
+      "default": [
+        "",
+        "",
+        " "
+      ]
     },
     "scroll-step": 1,
     "on-click": "pamixer -t",
@@ -139,7 +147,14 @@
     },
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% 󰂄",
-    "format-icons": ["󰂎", "󰁺", "󰁽", "󰂁", "󰂂", "󰁹"],
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁽",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
     "max-length": 25
   },
   "clock": {
@@ -152,7 +167,6 @@
     "format": "",
     "on-click": "wlogout"
   },
-
   "custom/notification": {
     "format": "{}  ",
     "interval": 10,

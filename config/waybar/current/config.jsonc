@@ -11,17 +11,16 @@
   "margin-bottom": 0,
   "margin-left": 0,
   "margin-right": 0,
-  "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+  "modules-left": ["hyprland/workspaces", "wlr/taskbar", "custom/weather"],
   "modules-center": [
-    "custom/weather",
-    "custom/sep",
+    // "custom/sep",
     "cpu",
     "custom/sep",
     "clock",
     "custom/sep",
-    "temperature",
-    "custom/sep",
-    "custom/updates"
+    "temperature"
+    // "custom/sep"
+    // "custom/updates"
   ],
   "modules-right": [
     "tray",
@@ -141,6 +140,10 @@
     "on-click-middle": "pavucontrol"
   },
   "hyprland/language": {
+    "format": "{short}",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+  },
+  "custom/language": {
     "format": "{short}",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
   },

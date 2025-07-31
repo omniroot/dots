@@ -59,9 +59,42 @@ dummybox {
 }
 
 
-// Inputs //
+// Inputs 
+inputbar  {
+    enabled:                     true;
+padding:                     1em;
+    spacing:                     0em;
+    background-color:            @background;
+    background-image: transparent;
+    text-color:                  @on-background;
+
+} //
+
 inputbar {
-    enabled:                     false;
+	children: [ entry];
+	background-color: @background;
+	border-radius: 0;
+	padding: 0 0 6 0;
+}
+
+prompt {
+	font: "JetbrainsMono Nerd Font 20";
+	background-color: @background-alt;
+	text-color: @accent;
+	enabled: true;
+	border-radius: 16px;
+	padding: 2 14 4 14;
+}
+
+entry {
+	background-color: @background;
+	text-color: @on-background;
+	placeholder-color: @surface-variant;
+	border-radius: 1em;
+	placeholder: "Search...";
+	blink: false;
+	margin: 12 14 4 100;
+    padding: 4;
 }
 
 
@@ -78,7 +111,7 @@ listview {
     spacing:                     0em;
     enabled:                     true;
     columns:                     1;
-    lines:                       7;
+    lines:                       5;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
