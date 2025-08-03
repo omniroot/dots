@@ -4,7 +4,7 @@ function recache() {
 	compinit -i
 }
 
-alias ls="ls --color=auto"
+alias ls="eza"
 alias c="clear"
 alias cd="z"
 alias gg="z"
